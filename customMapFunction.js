@@ -11,13 +11,16 @@ var double = function(number) {
 };
 
 var yell = function(word) {
-  console.log(word.toUpperCase() + "!!!!!!");
+  var wordstring = word.toString();
+  console.log(wordstring.toUpperCase() + "!!!!!!");
 };
 
 
-var testArray = [1, 2, 3, 4, 5, 6];
+var numbers = [1, 2, 3, 4, 5, 6];
 var words = ['cat', 'dog', 'walrus', 'parrot', 'kangaroo'];
 
 
-customMap(testArray, double);
-customMap(words, yell);
+customMap(numbers, double); // doubles the numbers
+customMap(words, yell);  // yells some words
+customMap(words, double);  // returns NaN, you can't double words!
+customMap(numbers, yell); // LOUD NUMBERS
